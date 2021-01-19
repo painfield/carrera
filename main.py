@@ -44,6 +44,8 @@ class Game():
         while not gameOver:
             #comprobacion de eventos
             for event in pygame.event.get():
+                if event.type == pygame.QUIT: #if event.type == pygame.
+                    gameOver = True
                 if event.type == timer_event and not gameOver:
                     self.__screen.blit(self.__background,(0,0)) #renderiza pantalla
                     #self.__screen.blit(self.default_car.skin,self.default_car.position)
